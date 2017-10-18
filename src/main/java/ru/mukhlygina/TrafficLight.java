@@ -25,9 +25,9 @@ public class TrafficLight {
 
         int moment = minutes % 10;
 
-        if (moment == 0 || moment < RED_LIGHT_END) {
+        if (moment < RED_LIGHT_END) {
             return Light.RED;
-        } else if (moment >= RED_LIGHT_END && moment < YELLOW_LIGHT_END) {
+        } else if (moment < YELLOW_LIGHT_END) {
             return Light.YELLOW;
         } else {
             return Light.GREEN;
