@@ -1,6 +1,6 @@
 import org.junit.Test;
-import ru.mukhlygina.Light;
-import ru.mukhlygina.TrafficLight;
+import homework1.Light;
+import homework1.TrafficLight;
 
 import static org.junit.Assert.assertTrue;
 

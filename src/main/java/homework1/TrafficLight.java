@@ -1,4 +1,4 @@
-package ru.mukhlygina;
+package homework1;
 
 import java.util.Scanner;
 
