@@ -19,8 +19,14 @@ public class HorseRace {
         return fastestHorse;
     }
 
-    public Horse makeBet(Horse horse, int money) {
-
-        return horse;
+    public boolean checkBet(Bet bet, String horseWinner, Account account) {
+        boolean isWinner = false;
+        if(bet.getHorse().equals(horseWinner)) {
+            account.addMoney(bet.getMoney());
+            isWinner = true;
+        } else {
+            account.reduceMoney(bet.getMoney());
+        }
+        return isWinner;
     }
 }

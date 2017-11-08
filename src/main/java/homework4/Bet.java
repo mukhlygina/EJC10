@@ -2,11 +2,11 @@ package homework4;
 
 public class Bet {
     private int money;
-    private Horse horse;
+    private String horseName;
 
-    public Bet(int money, Horse horse) {
+    public Bet(int money, String horseName) {
         this.money = money;
-        this.horse = horse;
+        this.horseName = horseName;
     }
 
     public int getMoney() {
@@ -17,11 +17,11 @@ public class Bet {
         this.money = money;
     }
 
-    public Horse getHorse() {
-        return horse;
+    public String getHorse() {
+        return horseName;
     }
 
-    public void setHorse(Horse horse) {
-        this.horse = horse;
+    public void setHorse(String horseName) {
+        this.horseName = horseName;
     }
 }
