@@ -1,9 +1,11 @@
 package homework4;
 
-public class HorseRace {
-    private Horse [] horses;
+import java.util.ArrayList;
 
-    public HorseRace(Horse [] horses) {
+public class HorseRace {
+    private ArrayList<Horse> horses;
+
+    public HorseRace(ArrayList<Horse> horses) {
         this.horses = horses;
     }
 
@@ -11,7 +13,7 @@ public class HorseRace {
         int speed = 0;
         Horse fastestHorse = null;
         for (Horse horse : this.horses) {
-            if(horse.getSpeed() > speed) {
+            if (horse.getSpeed() > speed) {
                 speed = horse.getSpeed();
                 fastestHorse = horse;
             }
@@ -19,9 +21,9 @@ public class HorseRace {
         return fastestHorse;
     }
 
-    public boolean checkBet(Bet bet, String horseWinner, Account account) {
+    public boolean checkBet(Bet bet, Horse winner, Account account) {
         boolean isWinner = false;
-        if(bet.getHorse().equals(horseWinner)) {
+        if (bet.getHorse().getName().equals(winner.getName())) {
             account.addMoney(bet.getMoney());
             isWinner = true;
         } else {

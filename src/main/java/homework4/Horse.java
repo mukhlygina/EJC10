@@ -5,7 +5,6 @@ import java.util.Random;
 public class Horse {
     private String name;
     private int speed;
-    private String breed;
     private int age;
 
     public Horse() {
@@ -28,14 +27,6 @@ public class Horse {
         this.speed = speed;
     }
 
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
     public int getAge() {
         return age;
     }
@@ -44,16 +35,11 @@ public class Horse {
         this.age = age;
     }
 
-    public Horse(String name) {
+    public Horse(String name, int age) {
+        this.age = age;
         this.name = name;
         Random random = new Random();
         this.speed = random.nextInt(15);
-    }
-
-    public Horse(int speed, String breed, int age) {
-        this.age = age;
-        this.breed = breed;
-        this.speed = speed;
     }
 
     @Override
@@ -61,7 +47,6 @@ public class Horse {
         return "Horse{" +
                 "name='" + name + '\'' +
                 ", speed=" + speed +
-                ", breed='" + breed + '\'' +
                 ", age=" + age +
                 '}';
     }
