@@ -7,7 +7,7 @@ public class Account {
         amountOfMoney = money;
     }
 
-    public int getBalanceInformation() {
+    public int getAccount() {
         return amountOfMoney;
     }
 
@@ -19,5 +19,9 @@ public class Account {
     public int reduceMoney(int money) {
         amountOfMoney -= money;
         return amountOfMoney;
+    }
+
+    public void showAccountInfo() {
+        System.out.printf("Your account is %d$ %n", amountOfMoney);
     }
 }

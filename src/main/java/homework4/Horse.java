@@ -11,6 +11,19 @@ public class Horse {
 
     }
 
+    public Horse(String name, int age) {
+        this.age = age;
+        this.name = name;
+        Random random = new Random();
+        this.speed = random.nextInt(15);
+    }
+
+    public Horse(String name, int age, int speed) {
+        this.age = age;
+        this.name = name;
+        this.speed = speed;
+    }
+
     public String getName() {
         return name;
     }
@@ -33,13 +46,6 @@ public class Horse {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Horse(String name, int age) {
-        this.age = age;
-        this.name = name;
-        Random random = new Random();
-        this.speed = random.nextInt(15);
     }
 
     @Override
