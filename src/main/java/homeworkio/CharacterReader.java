@@ -1,14 +1,12 @@
 package homeworkio;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CharacterReader {
-    public ArrayList<String> javaWords = new ArrayList<>();
     public static String[] words = {"while", "for", "if", "else", "switch", "case",
             "default", "do", "break", "continue", "try", "catch", "finally", "throw", "throws", "private",
             "protected", "public", "import", "package", "class", "interface", "extends", "implements", "static",
@@ -25,18 +23,17 @@ public class CharacterReader {
 
     public static Map<String, Integer> findJavaWords(String data) {
         Map<String, Integer> foundWords = new HashMap<>();
-        for(String string : words) {
-            Pattern pattern = Pattern.compile(string);
+        for(String word : words) {
+            Pattern pattern = Pattern.compile(word);
             Matcher matcher = pattern.matcher(data);
             int count = 0;
             while (matcher.find()) {
                 count++;
             }
             if(count != 0) {
-                foundWords.put(string, count);
+                foundWords.put(word, count);
             }
         }
-
         return foundWords;
     }
 
